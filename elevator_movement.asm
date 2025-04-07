@@ -430,7 +430,3 @@ stop_moving_clear:
 	addi $sp $sp 4
 	jr $ra
 
-
-
-# La routine open_elevator est supposée être définie ailleurs.
-

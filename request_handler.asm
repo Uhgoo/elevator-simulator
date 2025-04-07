@@ -48,7 +48,7 @@ check_once:
 ignore:
 	jr $ra
 
-# Check if dir == 0, (loop requests), or if elevator is stable (1 = loop, 0 == check once)
+# Check if elevator is stable (1 = loop, 0 == check once)
 check_dir_before_loop:
 	la $t0 elevator_stable
 	lw $t1 0($t0)
@@ -158,6 +158,8 @@ process_command:
 	beq $t6 $t5 add_down_list
 	li $t6 -1
 	beq $t6 $t5 add_up_list
+	
+	j clear_buffer
 	
 	
 

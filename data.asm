@@ -1,9 +1,6 @@
 .data
 	total_floors:		.word 9
 	initial_floor:		.word 1
-	dir_idle:		.word 0
-	dir_up:			.word 1
-	dir_down:		.word -1
 	
 	up_list:		.space 9
 	down_list:		.space 9
